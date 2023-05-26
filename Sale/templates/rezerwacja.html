@@ -1,0 +1,15 @@
+{% extends 'szablon.html' %}
+
+{% block rezerwacja %}
+{% if rezerwacje_user %}
+          <h1>Nr. rezerwacji: {{ rezerwacje_user.id }}</h1>
+          <p>Zarezerwowana sala: {{ rezerwacje_user.sala }}</p>
+          <p>Osoba rezerwująca: {{ rezerwacje_user.user }}</p>
+          <p>Firma cateringowa: {{ rezerwacje_user.catering }}</p>
+          <p>Wybrane wyposażenie: {{ rezerwacje_user.wyposazenie }}</p>
+          <p>Poczatek rezerwacji: {{ rezerwacje_user.poczatek_wynajmu }}</p>
+          <p>Koniec rezerwacji: {{ rezerwacje_user.koniec_wynajmu }}</p>
+{% else %}
+          <p>Nie ma takiej rezerwacji</p>
+{% endif %}
+{% endblock rezerwacja %}

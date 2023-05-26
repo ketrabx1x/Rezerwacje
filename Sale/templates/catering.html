@@ -1,0 +1,11 @@
+{% extends 'szablon.html' %}
+
+{% block catering %}
+{% if catering_user %}
+          <h1>{{ catering_user.nazwa }}</h1>
+          <p>Opis: {{ catering_user.opis }}</p>
+          <p>Cena: {{ catering_user.cena }} zł</p>
+{% else %}
+          <p>Nie ma takiego kateringu</p>
+{% endif %}
+{% endblock catering %}

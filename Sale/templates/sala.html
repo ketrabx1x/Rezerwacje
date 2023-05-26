@@ -1,0 +1,11 @@
+{% extends 'szablon.html' %}
+
+{% block sala %}
+{% if sale_user %}
+          <h1>{{ sale_user.nazwa }}</h1>
+          <p>Pojemność: {{ sale_user.pojemnosc }} miejsc</p>
+          <p>Cena: {{ sale_user.cena }} zł</p>
+{% else %}
+          <p>Nie ma takiej sali</p>
+{% endif %}
+{% endblock sala %}

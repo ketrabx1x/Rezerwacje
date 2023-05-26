@@ -1,0 +1,11 @@
+{% extends 'szablon.html' %}
+
+{% block wyposazenie %}
+{% if wyposazenie_user %}
+          <h1>{{ wyposazenie_user.nazwa}}</h1>
+          <p>Opis: {{ wyposazenie_user.opis}}</p>
+          <p>Cena: {{ wyposazenie_user.cena}} zł</p>
+{% else %}
+          <p>Nie ma takiego zestawu</p>
+{% endif %}
+{% endblock wyposazenie %}
